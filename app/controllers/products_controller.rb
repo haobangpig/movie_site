@@ -1,6 +1,5 @@
-class ProductsController < ApplicationController
-  layout 'review_site'
-
+class ProductsController < RankingController
+  before_action :authenticate_user!, only: :search
   def index
     @products = Product.all.limit(20).order('id DESC')
   end

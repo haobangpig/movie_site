@@ -22,18 +22,18 @@
                 </h2>
               </header>
               <ul style="padding: 0">
-                <li style="border-bottom: dotted 1px">
-                  <div class="thumbnail__caption">
-                    <h3 class="text-xsmall text-overflow" title="テスト太郎">
-                      <% @review.each do |t|%>
-                        </span><%= t.nickname %><small 2014=""></small>
-                    </h3>
-                    <p class="text-small">
-                    <span class="rating-star"><i class="star-actived rate-<%= t.rate %>"></i></span>
-                    </p>
-                    <p>
-                    <%= t.review %>
-                    </p>
+                <% @review.each do |t|%>
+                  <li style="border-bottom: dotted 1px">
+                    <div class="thumbnail__caption">
+                      <h3 class="text-xsmall text-overflow" title="<%= t.user.nickname %>">
+                        <span><i class="icon-rate-60 text-xxsmall opacity-60" title=""></i></span><%= t.user.nickname %>
+                      </h3>
+                      <p class="text-small">
+                      <span class="rating-star"><i class="star-actived rate-<%= t.rate %>"></i></span>
+                      </p>
+                      <p>
+                      <%= t.review %>
+                      </p>
                     <% end %>
                   </div>
                 </li>
