@@ -1,0 +1,5 @@
+module ProductsHelper
+  def average_rate
+    '1'
+  end
+end
